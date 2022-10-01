@@ -19,7 +19,7 @@
     
     
       
-        <title>Decorators - Scrapli</title>
+        <title>decorators - Scrapli</title>
       
     
     
@@ -47,6 +47,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -70,6 +72,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#decorators" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -100,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Decorators
+              decorators
             
           </span>
         </div>
@@ -369,6 +376,1531 @@
 
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          API Reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Reference" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../channel/">channel</a>
+          
+            <label for="__nav_3_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="channel" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          channel
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../channel/async_channel/" class="md-nav__link">
+        async_channel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../channel/base_channel/" class="md-nav__link">
+        base_channel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../channel/sync_channel/" class="md-nav__link">
+        sync_channel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          decorators
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        decorators
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#decorators" class="md-nav__link">
+    decorators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decorators.timeout_modifier" class="md-nav__link">
+    timeout_modifier()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decorators.timeout_wrapper" class="md-nav__link">
+    timeout_wrapper()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../driver/">driver</a>
+          
+            <label for="__nav_3_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="driver" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          driver
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_1" type="checkbox" id="__nav_3_3_1" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../driver/base/">base</a>
+          
+            <label for="__nav_3_3_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="base" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          base
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/base/async_driver/" class="md-nav__link">
+        async_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/base/base_driver/" class="md-nav__link">
+        base_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/base/sync_driver/" class="md-nav__link">
+        sync_driver
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../driver/core/">core</a>
+          
+            <label for="__nav_3_3_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="core" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          core
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2_1" type="checkbox" id="__nav_3_3_2_1" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../driver/core/arista_eos/">arista_eos</a>
+          
+            <label for="__nav_3_3_2_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="arista_eos" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          arista_eos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/arista_eos/async_driver/" class="md-nav__link">
+        async_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/arista_eos/base_driver/" class="md-nav__link">
+        base_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/arista_eos/sync_driver/" class="md-nav__link">
+        sync_driver
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2_2" type="checkbox" id="__nav_3_3_2_2" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../driver/core/cisco_iosxe/">cisco_iosxe</a>
+          
+            <label for="__nav_3_3_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="cisco_iosxe" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          cisco_iosxe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/cisco_iosxe/async_driver/" class="md-nav__link">
+        async_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/cisco_iosxe/base_driver/" class="md-nav__link">
+        base_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/cisco_iosxe/sync_driver/" class="md-nav__link">
+        sync_driver
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2_3" type="checkbox" id="__nav_3_3_2_3" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../driver/core/cisco_iosxr/">cisco_iosxr</a>
+          
+            <label for="__nav_3_3_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="cisco_iosxr" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          cisco_iosxr
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/cisco_iosxr/async_driver/" class="md-nav__link">
+        async_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/cisco_iosxr/base_driver/" class="md-nav__link">
+        base_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/cisco_iosxr/sync_driver/" class="md-nav__link">
+        sync_driver
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2_4" type="checkbox" id="__nav_3_3_2_4" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../driver/core/cisco_nxos/">cisco_nxos</a>
+          
+            <label for="__nav_3_3_2_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="cisco_nxos" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          cisco_nxos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/cisco_nxos/async_driver/" class="md-nav__link">
+        async_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/cisco_nxos/base_driver/" class="md-nav__link">
+        base_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/cisco_nxos/sync_driver/" class="md-nav__link">
+        sync_driver
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2_5" type="checkbox" id="__nav_3_3_2_5" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../driver/core/juniper_junos/">juniper_junos</a>
+          
+            <label for="__nav_3_3_2_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="juniper_junos" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_3_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          juniper_junos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/juniper_junos/async_driver/" class="md-nav__link">
+        async_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/juniper_junos/base_driver/" class="md-nav__link">
+        base_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/core/juniper_junos/sync_driver/" class="md-nav__link">
+        sync_driver
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_3" type="checkbox" id="__nav_3_3_3" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../driver/generic/">generic</a>
+          
+            <label for="__nav_3_3_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="generic" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          generic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/generic/async_driver/" class="md-nav__link">
+        async_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/generic/base_driver/" class="md-nav__link">
+        base_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/generic/sync_driver/" class="md-nav__link">
+        sync_driver
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_4" type="checkbox" id="__nav_3_3_4" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../driver/network/">network</a>
+          
+            <label for="__nav_3_3_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="network" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          network
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/network/async_driver/" class="md-nav__link">
+        async_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/network/base_driver/" class="md-nav__link">
+        base_driver
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../driver/network/sync_driver/" class="md-nav__link">
+        sync_driver
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exceptions/" class="md-nav__link">
+        exceptions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../factory/" class="md-nav__link">
+        factory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../helper/" class="md-nav__link">
+        helper
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logging/" class="md-nav__link">
+        logging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../response/" class="md-nav__link">
+        response
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssh_config/" class="md-nav__link">
+        ssh_config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" type="checkbox" id="__nav_3_11" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../transport/">transport</a>
+          
+            <label for="__nav_3_11">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="transport" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_11">
+          <span class="md-nav__icon md-icon"></span>
+          transport
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11_1" type="checkbox" id="__nav_3_11_1" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../transport/base/">base</a>
+          
+            <label for="__nav_3_11_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="base" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_11_1">
+          <span class="md-nav__icon md-icon"></span>
+          base
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/base/async_transport/" class="md-nav__link">
+        async_transport
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/base/base_socket/" class="md-nav__link">
+        base_socket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/base/base_transport/" class="md-nav__link">
+        base_transport
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/base/sync_transport/" class="md-nav__link">
+        sync_transport
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/base/telnet_common/" class="md-nav__link">
+        telnet_common
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11_2" type="checkbox" id="__nav_3_11_2" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../transport/plugins/">plugins</a>
+          
+            <label for="__nav_3_11_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="plugins" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_11_2">
+          <span class="md-nav__icon md-icon"></span>
+          plugins
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11_2_1" type="checkbox" id="__nav_3_11_2_1" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../transport/plugins/asyncssh/">asyncssh</a>
+          
+            <label for="__nav_3_11_2_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="asyncssh" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_11_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          asyncssh
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/plugins/asyncssh/transport/" class="md-nav__link">
+        transport
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11_2_2" type="checkbox" id="__nav_3_11_2_2" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../transport/plugins/asynctelnet/">asynctelnet</a>
+          
+            <label for="__nav_3_11_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="asynctelnet" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_11_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          asynctelnet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/plugins/asynctelnet/transport/" class="md-nav__link">
+        transport
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11_2_3" type="checkbox" id="__nav_3_11_2_3" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../transport/plugins/paramiko/">paramiko</a>
+          
+            <label for="__nav_3_11_2_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="paramiko" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_11_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          paramiko
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/plugins/paramiko/transport/" class="md-nav__link">
+        transport
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11_2_4" type="checkbox" id="__nav_3_11_2_4" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../transport/plugins/ssh2/">ssh2</a>
+          
+            <label for="__nav_3_11_2_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="ssh2" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_11_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          ssh2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/plugins/ssh2/transport/" class="md-nav__link">
+        transport
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11_2_5" type="checkbox" id="__nav_3_11_2_5" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../transport/plugins/system/">system</a>
+          
+            <label for="__nav_3_11_2_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="system" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_11_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          system
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/plugins/system/ptyprocess/" class="md-nav__link">
+        ptyprocess
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/plugins/system/transport/" class="md-nav__link">
+        transport
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11_2_6" type="checkbox" id="__nav_3_11_2_6" >
+      
+      
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../transport/plugins/telnet/">telnet</a>
+          
+            <label for="__nav_3_11_2_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="telnet" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_11_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          telnet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/plugins/telnet/transport/" class="md-nav__link">
+        transport
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
   
     <li class="md-nav__item">
       <a href="../../changelog/" class="md-nav__link">
@@ -389,18 +1921,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_4">
+        <label class="md-nav__link" for="__nav_5">
           More Scrapli
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="More Scrapli" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           More Scrapli
         </label>
@@ -493,18 +2025,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_5">
+        <label class="md-nav__link" for="__nav_6">
           Other
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Other" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Other
         </label>
@@ -576,6 +2108,35 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#decorators" class="md-nav__link">
+    decorators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decorators.timeout_modifier" class="md-nav__link">
+    timeout_modifier()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decorators.timeout_wrapper" class="md-nav__link">
+    timeout_wrapper()
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -589,9 +2150,450 @@
                   
 
 
-  <h1>Decorators</h1>
+  <h1>decorators</h1>
 
-<p>::: decorators</p>
+<div class="doc doc-object doc-module">
+
+
+<a id="decorators"></a>
+  <div class="doc doc-contents first">
+  
+      <p>scrapli.decorators</p>
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="decorators.timeout_modifier" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">timeout_modifier</span><span class="p">(</span><span class="n">wrapped_func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span></code>
+
+<a href="#decorators.timeout_modifier" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Decorate an "operation" to modify the timeout_ops value for duration of that operation</p>
+<p>This decorator wraps send command/config ops and is used to allow users to set a
+<code>timeout_ops</code> value for the duration of a single method call -- this makes it so users don't
+need to manually set/reset the value</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>wrapped_func</code></td>
+          <td>
+                <code><span title="typing.Callable">Callable</span>[..., <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td><p>function being decorated</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>decorate</code></td>          <td>
+                <code><span title="typing.Callable">Callable</span>[..., <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td><p>decorated func</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>scrapli/decorators.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">timeout_modifier</span><span class="p">(</span><span class="n">wrapped_func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Decorate an &quot;operation&quot; to modify the timeout_ops value for duration of that operation</span>
+
+<span class="sd">    This decorator wraps send command/config ops and is used to allow users to set a</span>
+<span class="sd">    `timeout_ops` value for the duration of a single method call -- this makes it so users don&#39;t</span>
+<span class="sd">    need to manually set/reset the value</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        wrapped_func: function being decorated</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        decorate: decorated func</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        N/A</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">iscoroutinefunction</span><span class="p">(</span><span class="n">wrapped_func</span><span class="p">):</span>
+
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">decorate</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+            <span class="n">driver_instance</span><span class="p">:</span> <span class="s2">&quot;AsyncGenericDriver&quot;</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">driver_logger</span> <span class="o">=</span> <span class="n">driver_instance</span><span class="o">.</span><span class="n">logger</span>
+
+            <span class="n">timeout_ops_kwarg</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;timeout_ops&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">timeout_ops_kwarg</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">timeout_ops_kwarg</span> <span class="o">==</span> <span class="n">driver_instance</span><span class="o">.</span><span class="n">timeout_ops</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">wrapped_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">driver_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                    <span class="s2">&quot;modifying driver timeout for current operation, temporary timeout_ops &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;value: &#39;</span><span class="si">{</span><span class="n">timeout_ops_kwarg</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+                <span class="p">)</span>
+                <span class="n">base_timeout_ops</span> <span class="o">=</span> <span class="n">driver_instance</span><span class="o">.</span><span class="n">timeout_ops</span>
+                <span class="n">driver_instance</span><span class="o">.</span><span class="n">timeout_ops</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;timeout_ops&quot;</span><span class="p">]</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">wrapped_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                <span class="n">driver_instance</span><span class="o">.</span><span class="n">timeout_ops</span> <span class="o">=</span> <span class="n">base_timeout_ops</span>
+            <span class="k">return</span> <span class="n">result</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># ignoring type error:</span>
+        <span class="c1"># &quot;All conditional function variants must have identical signatures&quot;</span>
+        <span class="c1"># one is sync one is async so never going to be identical here!</span>
+        <span class="k">def</span> <span class="nf">decorate</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>  <span class="c1"># type: ignore</span>
+            <span class="n">driver_instance</span><span class="p">:</span> <span class="s2">&quot;GenericDriver&quot;</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">driver_logger</span> <span class="o">=</span> <span class="n">driver_instance</span><span class="o">.</span><span class="n">logger</span>
+
+            <span class="n">timeout_ops_kwarg</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;timeout_ops&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">timeout_ops_kwarg</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">timeout_ops_kwarg</span> <span class="o">==</span> <span class="n">driver_instance</span><span class="o">.</span><span class="n">timeout_ops</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">wrapped_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">driver_logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                    <span class="s2">&quot;modifying driver timeout for current operation, temporary timeout_ops &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;value: &#39;</span><span class="si">{</span><span class="n">timeout_ops_kwarg</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+                <span class="p">)</span>
+                <span class="n">base_timeout_ops</span> <span class="o">=</span> <span class="n">driver_instance</span><span class="o">.</span><span class="n">timeout_ops</span>
+                <span class="n">driver_instance</span><span class="o">.</span><span class="n">timeout_ops</span> <span class="o">=</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;timeout_ops&quot;</span><span class="p">]</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">wrapped_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                <span class="n">driver_instance</span><span class="o">.</span><span class="n">timeout_ops</span> <span class="o">=</span> <span class="n">base_timeout_ops</span>
+            <span class="k">return</span> <span class="n">result</span>
+
+    <span class="c1"># ensures that the wrapped function is updated w/ the original functions docs/etc. --</span>
+    <span class="c1"># necessary for introspection for the auto gen docs to work!</span>
+    <span class="n">update_wrapper</span><span class="p">(</span><span class="n">wrapper</span><span class="o">=</span><span class="n">decorate</span><span class="p">,</span> <span class="n">wrapped</span><span class="o">=</span><span class="n">wrapped_func</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">decorate</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
+<h2 id="decorators.timeout_wrapper" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">timeout_wrapper</span><span class="p">(</span><span class="n">wrapped_func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span></code>
+
+<a href="#decorators.timeout_wrapper" class="headerlink" title="Permanent link">&para;</a></h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Timeout wrapper for transports</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>wrapped_func</code></td>
+          <td>
+                <code><span title="typing.Callable">Callable</span>[..., <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td><p>function being wrapped -- must be a method of Channel or Transport</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+<th>Name</th>        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td><code>Any</code></td>          <td>
+                <code><span title="typing.Callable">Callable</span>[..., <span title="typing.Any">Any</span>]</code>
+          </td>
+          <td><p>result of wrapped function</p></td>
+        </tr>
+    </tbody>
+  </table>
+
+      <details class="quote">
+        <summary>Source code in <code>scrapli/decorators.py</code></summary>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">timeout_wrapper</span><span class="p">(</span><span class="n">wrapped_func</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Timeout wrapper for transports</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        wrapped_func: function being wrapped -- must be a method of Channel or Transport</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Any: result of wrapped function</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        N/A</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">iscoroutinefunction</span><span class="p">(</span><span class="n">wrapped_func</span><span class="p">):</span>
+
+        <span class="k">async</span> <span class="k">def</span> <span class="nf">decorate</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+            <span class="n">transport</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="n">timeout</span> <span class="o">=</span> <span class="n">_get_transport_logger_timeout</span><span class="p">(</span><span class="bp">cls</span><span class="o">=</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">timeout</span><span class="p">:</span>
+                <span class="k">return</span> <span class="k">await</span> <span class="n">wrapped_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">wait_for</span><span class="p">(</span><span class="n">wrapped_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">),</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">TimeoutError</span><span class="p">:</span>
+                <span class="n">_handle_timeout</span><span class="p">(</span>
+                    <span class="n">transport</span><span class="o">=</span><span class="n">transport</span><span class="p">,</span>
+                    <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span>
+                    <span class="n">message</span><span class="o">=</span><span class="n">_get_timeout_message</span><span class="p">(</span><span class="n">func_name</span><span class="o">=</span><span class="n">wrapped_func</span><span class="o">.</span><span class="vm">__name__</span><span class="p">),</span>
+                <span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># ignoring type error:</span>
+        <span class="c1"># &quot;All conditional function variants must have identical signatures&quot;</span>
+        <span class="c1"># one is sync one is async so never going to be identical here!</span>
+        <span class="k">def</span> <span class="nf">decorate</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>  <span class="c1"># type: ignore</span>
+            <span class="n">transport</span><span class="p">,</span> <span class="n">logger</span><span class="p">,</span> <span class="n">timeout</span> <span class="o">=</span> <span class="n">_get_transport_logger_timeout</span><span class="p">(</span><span class="bp">cls</span><span class="o">=</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">timeout</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">wrapped_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+            <span class="n">cls_name</span> <span class="o">=</span> <span class="n">transport</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
+
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="n">cls_name</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;SystemTransport&quot;</span><span class="p">,</span> <span class="s2">&quot;TelnetTransport&quot;</span><span class="p">)</span>
+                <span class="ow">or</span> <span class="n">_IS_WINDOWS</span>
+                <span class="ow">or</span> <span class="n">threading</span><span class="o">.</span><span class="n">current_thread</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">threading</span><span class="o">.</span><span class="n">main_thread</span><span class="p">()</span>
+            <span class="p">):</span>
+                <span class="k">return</span> <span class="n">_multiprocessing_timeout</span><span class="p">(</span>
+                    <span class="n">transport</span><span class="o">=</span><span class="n">transport</span><span class="p">,</span>
+                    <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span>
+                    <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+                    <span class="n">wrapped_func</span><span class="o">=</span><span class="n">wrapped_func</span><span class="p">,</span>
+                    <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span>
+                    <span class="n">kwargs</span><span class="o">=</span><span class="n">kwargs</span><span class="p">,</span>
+                <span class="p">)</span>
+
+            <span class="n">callback</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span>
+                <span class="n">_signal_raise_exception</span><span class="p">,</span>
+                <span class="n">transport</span><span class="o">=</span><span class="n">transport</span><span class="p">,</span>
+                <span class="n">logger</span><span class="o">=</span><span class="n">logger</span><span class="p">,</span>
+                <span class="n">message</span><span class="o">=</span><span class="n">_get_timeout_message</span><span class="p">(</span><span class="n">wrapped_func</span><span class="o">.</span><span class="vm">__name__</span><span class="p">),</span>
+            <span class="p">)</span>
+
+            <span class="n">old</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGALRM</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+            <span class="n">signal</span><span class="o">.</span><span class="n">setitimer</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">ITIMER_REAL</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">wrapped_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">finally</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">timeout</span><span class="p">:</span>
+                    <span class="n">signal</span><span class="o">.</span><span class="n">setitimer</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">ITIMER_REAL</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGALRM</span><span class="p">,</span> <span class="n">old</span><span class="p">)</span>
+
+    <span class="c1"># ensures that the wrapped function is updated w/ the original functions docs/etc. --</span>
+    <span class="c1"># necessary for introspection for the auto gen docs to work!</span>
+    <span class="n">update_wrapper</span><span class="p">(</span><span class="n">wrapper</span><span class="o">=</span><span class="n">decorate</span><span class="p">,</span> <span class="n">wrapped</span><span class="o">=</span><span class="n">wrapped_func</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">decorate</span>
+</code></pre></div></td></tr></table></div>
+      </details>
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
 
 
 
@@ -607,6 +2609,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../channel/sync_channel/" class="md-footer__link md-footer__link--prev" aria-label="Previous: sync_channel" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              sync_channel
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../driver/" class="md-footer__link md-footer__link--next" aria-label="Next: driver" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              driver
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
