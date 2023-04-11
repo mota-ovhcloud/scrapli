@@ -2949,7 +2949,18 @@
 <span class="normal">648</span>
 <span class="normal">649</span>
 <span class="normal">650</span>
-<span class="normal">651</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Channel</span><span class="p">(</span><span class="n">BaseChannel</span><span class="p">):</span>
+<span class="normal">651</span>
+<span class="normal">652</span>
+<span class="normal">653</span>
+<span class="normal">654</span>
+<span class="normal">655</span>
+<span class="normal">656</span>
+<span class="normal">657</span>
+<span class="normal">658</span>
+<span class="normal">659</span>
+<span class="normal">660</span>
+<span class="normal">661</span>
+<span class="normal">662</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">Channel</span><span class="p">(</span><span class="n">BaseChannel</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">transport</span><span class="p">:</span> <span class="n">Transport</span><span class="p">,</span>
@@ -3258,7 +3269,9 @@
                     <span class="k">return</span>
 
     <span class="nd">@timeout_wrapper</span>
-    <span class="k">def</span> <span class="nf">channel_authenticate_telnet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">auth_username</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">auth_password</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">channel_authenticate_telnet</span><span class="p">(</span>  <span class="c1"># noqa: c901</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">auth_username</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">auth_password</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Handle Telnet Authentication</span>
 
@@ -3292,7 +3305,16 @@
 
         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_channel_lock</span><span class="p">():</span>
             <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-                <span class="n">buf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">buf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+                <span class="k">except</span> <span class="n">ScrapliConnectionError</span><span class="p">:</span>
+                    <span class="c1"># telnet transport socket can send us an EOF which gets raised as a connection</span>
+                    <span class="c1"># error, if we see that we can try to send a return and go back to the top...</span>
+                    <span class="c1"># this first cropped up with telnet on asa devices in:</span>
+                    <span class="c1"># https://github.com/carlmontanari/scrapli/issues/278</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">send_return</span><span class="p">()</span>
+                    <span class="n">return_attempts</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="k">continue</span>
 
                 <span class="k">if</span> <span class="ow">not</span> <span class="n">buf</span><span class="p">:</span>
                     <span class="n">current_iteration_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()</span>
@@ -4010,8 +4032,21 @@
 <span class="normal">400</span>
 <span class="normal">401</span>
 <span class="normal">402</span>
-<span class="normal">403</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@timeout_wrapper</span>
-<span class="k">def</span> <span class="nf">channel_authenticate_telnet</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">auth_username</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">auth_password</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@timeout_wrapper</span>
+<span class="k">def</span> <span class="nf">channel_authenticate_telnet</span><span class="p">(</span>  <span class="c1"># noqa: c901</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">auth_username</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">auth_password</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Handle Telnet Authentication</span>
 
@@ -4045,7 +4080,16 @@
 
     <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">_channel_lock</span><span class="p">():</span>
         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="n">buf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">buf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="k">except</span> <span class="n">ScrapliConnectionError</span><span class="p">:</span>
+                <span class="c1"># telnet transport socket can send us an EOF which gets raised as a connection</span>
+                <span class="c1"># error, if we see that we can try to send a return and go back to the top...</span>
+                <span class="c1"># this first cropped up with telnet on asa devices in:</span>
+                <span class="c1"># https://github.com/carlmontanari/scrapli/issues/278</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">send_return</span><span class="p">()</span>
+                <span class="n">return_attempts</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">continue</span>
 
             <span class="k">if</span> <span class="ow">not</span> <span class="n">buf</span><span class="p">:</span>
                 <span class="n">current_iteration_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()</span>
@@ -4130,18 +4174,7 @@
 
       <details class="quote">
         <summary>Source code in <code>channel/sync_channel.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">405</span>
-<span class="normal">406</span>
-<span class="normal">407</span>
-<span class="normal">408</span>
-<span class="normal">409</span>
-<span class="normal">410</span>
-<span class="normal">411</span>
-<span class="normal">412</span>
-<span class="normal">413</span>
-<span class="normal">414</span>
-<span class="normal">415</span>
-<span class="normal">416</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">416</span>
 <span class="normal">417</span>
 <span class="normal">418</span>
 <span class="normal">419</span>
@@ -4164,7 +4197,18 @@
 <span class="normal">436</span>
 <span class="normal">437</span>
 <span class="normal">438</span>
-<span class="normal">439</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@timeout_wrapper</span>
+<span class="normal">439</span>
+<span class="normal">440</span>
+<span class="normal">441</span>
+<span class="normal">442</span>
+<span class="normal">443</span>
+<span class="normal">444</span>
+<span class="normal">445</span>
+<span class="normal">446</span>
+<span class="normal">447</span>
+<span class="normal">448</span>
+<span class="normal">449</span>
+<span class="normal">450</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@timeout_wrapper</span>
 <span class="k">def</span> <span class="nf">get_prompt</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get current channel prompt</span>
@@ -4382,18 +4426,7 @@ to read to the prompt pattern -- this should not be used manually! (only used by
 
       <details class="quote">
         <summary>Source code in <code>channel/sync_channel.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">441</span>
-<span class="normal">442</span>
-<span class="normal">443</span>
-<span class="normal">444</span>
-<span class="normal">445</span>
-<span class="normal">446</span>
-<span class="normal">447</span>
-<span class="normal">448</span>
-<span class="normal">449</span>
-<span class="normal">450</span>
-<span class="normal">451</span>
-<span class="normal">452</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">452</span>
 <span class="normal">453</span>
 <span class="normal">454</span>
 <span class="normal">455</span>
@@ -4428,7 +4461,18 @@ to read to the prompt pattern -- this should not be used manually! (only used by
 <span class="normal">484</span>
 <span class="normal">485</span>
 <span class="normal">486</span>
-<span class="normal">487</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@timeout_wrapper</span>
+<span class="normal">487</span>
+<span class="normal">488</span>
+<span class="normal">489</span>
+<span class="normal">490</span>
+<span class="normal">491</span>
+<span class="normal">492</span>
+<span class="normal">493</span>
+<span class="normal">494</span>
+<span class="normal">495</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@timeout_wrapper</span>
 <span class="k">def</span> <span class="nf">send_input</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">channel_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -4570,18 +4614,7 @@ return output read up till that read</p></td>
 
       <details class="quote">
         <summary>Source code in <code>channel/sync_channel.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">489</span>
-<span class="normal">490</span>
-<span class="normal">491</span>
-<span class="normal">492</span>
-<span class="normal">493</span>
-<span class="normal">494</span>
-<span class="normal">495</span>
-<span class="normal">496</span>
-<span class="normal">497</span>
-<span class="normal">498</span>
-<span class="normal">499</span>
-<span class="normal">500</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">500</span>
 <span class="normal">501</span>
 <span class="normal">502</span>
 <span class="normal">503</span>
@@ -4623,7 +4656,18 @@ return output read up till that read</p></td>
 <span class="normal">539</span>
 <span class="normal">540</span>
 <span class="normal">541</span>
-<span class="normal">542</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@timeout_wrapper</span>
+<span class="normal">542</span>
+<span class="normal">543</span>
+<span class="normal">544</span>
+<span class="normal">545</span>
+<span class="normal">546</span>
+<span class="normal">547</span>
+<span class="normal">548</span>
+<span class="normal">549</span>
+<span class="normal">550</span>
+<span class="normal">551</span>
+<span class="normal">552</span>
+<span class="normal">553</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@timeout_wrapper</span>
 <span class="k">def</span> <span class="nf">send_input_and_read</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">channel_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -4794,18 +4838,7 @@ and the output read from the channel that has been "cleaned up"</p></td>
 
       <details class="quote">
         <summary>Source code in <code>channel/sync_channel.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">544</span>
-<span class="normal">545</span>
-<span class="normal">546</span>
-<span class="normal">547</span>
-<span class="normal">548</span>
-<span class="normal">549</span>
-<span class="normal">550</span>
-<span class="normal">551</span>
-<span class="normal">552</span>
-<span class="normal">553</span>
-<span class="normal">554</span>
-<span class="normal">555</span>
+        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">555</span>
 <span class="normal">556</span>
 <span class="normal">557</span>
 <span class="normal">558</span>
@@ -4901,7 +4934,18 @@ and the output read from the channel that has been "cleaned up"</p></td>
 <span class="normal">648</span>
 <span class="normal">649</span>
 <span class="normal">650</span>
-<span class="normal">651</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@timeout_wrapper</span>
+<span class="normal">651</span>
+<span class="normal">652</span>
+<span class="normal">653</span>
+<span class="normal">654</span>
+<span class="normal">655</span>
+<span class="normal">656</span>
+<span class="normal">657</span>
+<span class="normal">658</span>
+<span class="normal">659</span>
+<span class="normal">660</span>
+<span class="normal">661</span>
+<span class="normal">662</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@timeout_wrapper</span>
 <span class="k">def</span> <span class="nf">send_inputs_interact</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">interact_events</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]]],</span>

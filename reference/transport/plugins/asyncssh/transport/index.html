@@ -2480,8 +2480,7 @@
 <span class="normal">274</span>
 <span class="normal">275</span>
 <span class="normal">276</span>
-<span class="normal">277</span>
-<span class="normal">278</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">AsyncsshTransport</span><span class="p">(</span><span class="n">AsyncTransport</span><span class="p">):</span>
+<span class="normal">277</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">AsyncsshTransport</span><span class="p">(</span><span class="n">AsyncTransport</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">base_transport_args</span><span class="p">:</span> <span class="n">BaseTransportArgs</span><span class="p">,</span> <span class="n">plugin_transport_args</span><span class="p">:</span> <span class="n">PluginTransportArgs</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -2677,7 +2676,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_pre_open_closing_log</span><span class="p">(</span><span class="n">closing</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="p">:</span>
-
             <span class="k">with</span> <span class="n">suppress</span><span class="p">(</span><span class="ne">BrokenPipeError</span><span class="p">):</span>
                 <span class="c1"># this may raise a BrokenPipeError because seems it is possible for the connection</span>
                 <span class="c1"># transport is_closing() to be true already in some cases... since we are closing</span>

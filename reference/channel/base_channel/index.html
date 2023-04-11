@@ -2887,7 +2887,16 @@
 <span class="normal">599</span>
 <span class="normal">600</span>
 <span class="normal">601</span>
-<span class="normal">602</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">BaseChannel</span><span class="p">:</span>
+<span class="normal">602</span>
+<span class="normal">603</span>
+<span class="normal">604</span>
+<span class="normal">605</span>
+<span class="normal">606</span>
+<span class="normal">607</span>
+<span class="normal">608</span>
+<span class="normal">609</span>
+<span class="normal">610</span>
+<span class="normal">611</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span> <span class="nc">BaseChannel</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">transport</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">AsyncTransport</span><span class="p">,</span> <span class="n">Transport</span><span class="p">],</span>
@@ -3205,6 +3214,15 @@
             <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;Timed out connecting to host&quot;</span>
         <span class="k">elif</span> <span class="sa">b</span><span class="s2">&quot;no route to host&quot;</span> <span class="ow">in</span> <span class="n">output</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;No route to host&quot;</span>
+        <span class="k">elif</span> <span class="sa">b</span><span class="s2">&quot;no matching host key&quot;</span> <span class="ow">in</span> <span class="n">output</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;No matching host key type found for host&quot;</span>
+            <span class="n">key_exchange_pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+                <span class="n">pattern</span><span class="o">=</span><span class="sa">rb</span><span class="s2">&quot;their offer: ([a-z0-9\-,]*)&quot;</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">M</span> <span class="o">|</span> <span class="n">re</span><span class="o">.</span><span class="n">I</span>
+            <span class="p">)</span>
+            <span class="n">offered_key_exchanges_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="o">=</span><span class="n">key_exchange_pattern</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="n">output</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">offered_key_exchanges_match</span><span class="p">:</span>
+                <span class="n">offered_key_exchanges</span> <span class="o">=</span> <span class="n">offered_key_exchanges_match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+                <span class="n">msg</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;, their offer: </span><span class="si">{</span><span class="n">offered_key_exchanges</span><span class="si">}</span><span class="s2">&quot;</span>
         <span class="k">elif</span> <span class="sa">b</span><span class="s2">&quot;no matching key exchange&quot;</span> <span class="ow">in</span> <span class="n">output</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
             <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;No matching key exchange found for host&quot;</span>
             <span class="n">key_exchange_pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
